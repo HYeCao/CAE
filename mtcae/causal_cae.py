@@ -258,22 +258,22 @@ class Causal_CAE(RLAlgorithm):
                 [step_type == StepType.TERMINAL for step_type in
                  path['step_types']]).reshape(-1, 1))
 
-        # 将每个 path 的数据合并成一个大的数组
+        
         states = np.concatenate(states, axis=0)
         actions = np.concatenate(actions, axis=0)
         rewards = np.concatenate(rewards, axis=0)
         next_states = np.concatenate(next_states, axis=0)
         dones = np.concatenate(dones, axis=0)
 
-        # 确保 sample_size 不超过数据总长度
+        
         total_samples = len(states)
         sample_size = min(sample_size, total_samples)
 
-        # 从数据中随机采样指定数量的数据
+       
         indices = np.random.choice(total_samples, size=sample_size,
                                    replace=False)
 
-        # 返回采样的数据
+       
         return states[indices], actions[indices], rewards[indices], \
         next_states[indices], dones[indices]
 
