@@ -26,6 +26,10 @@ If you would like to run CAE on a sparse reward version of a certain `task`, ple
 python main_causal.py --env_name task --reward_type sparse
 ~~~
 
+We also provide the core code of MT-CAE for multi-task learning. MT-CAE is implemented based on the garage package 'https://github.com/rlworkgroup/garage'
+
+
+
 
 ## 🙏 Acknowledgement
 
