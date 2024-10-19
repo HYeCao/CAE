@@ -1,4 +1,3 @@
-"""This modules creates a sac model in PyTorch."""
 from collections import deque
 import copy
 

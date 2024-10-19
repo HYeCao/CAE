@@ -1,4 +1,3 @@
-"""This modules creates a MTSAC model in PyTorch."""
 
 import numpy as np
 import torch
